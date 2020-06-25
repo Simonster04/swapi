@@ -20,12 +20,12 @@ películas con la siguiente información:
 - Estatura (height)
 - Nombre del planeta proveniente (homeworld)
 - Especie
-■ Nombre (name)
+- 1. Nombre (name)
 
 ■ Idioma (language)
 ■ Estatura promedio (average_height)
-● Información sobre la nave estelar más grande de la película (starships)
-○ Nombre (name)
-○ Modelo (model)
-○ Fabricante (manufacturer)
-○ Número de pasajeros (passengers)
+4. Información sobre la nave estelar más grande de la película (starships)
+- Nombre (name)
+- Modelo (model)
+- Fabricante (manufacturer)
+- Número de pasajeros (passengers)
