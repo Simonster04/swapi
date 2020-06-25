@@ -29,8 +29,14 @@ function get_planets() {
     })
     .then((response) => response.json())
     .then((responseJson) => {
+      let i = 0;
       for(let planet of responseJson.results){
         planets.push({name: planet.name});
+        planets[i].terrain = planet.terrain;
+        planets[i].gravity = planet.gravity;
+        planets[i].diameter = planet.diameter;
+        planets[i].population = planet.population;
+        i++;
       }
       console.log(planets)
     })
@@ -48,8 +54,16 @@ function get_people() {
     })
     .then((response) => response.json())
     .then((responseJson) => {
+      let i = 0;
       for(let actor of responseJson.results){
         people.push({name: actor.name});
+        people[i].gender = actor.gender;
+        people[i].hair_color = actor.hair_color;
+        people[i].skin_color = actor.skin_color;
+        people[i].eye_color = actor.eye_color;
+        people[i].height = actor.height;
+        people[i].homeworld = actor.homeworld;
+        i++;
       }
       console.log(people)
     })
@@ -60,14 +74,19 @@ function get_people() {
 }
 */
 
+
 function get_starships() {
   fetch('https://swapi.dev/api/starships/', {
       method: 'GET',
     })
     .then((response) => response.json())
     .then((responseJson) => {
+      let i = 0;
       for(let starship of responseJson.results){
         starships.push({name: starship.name});
+        starships[i].model = starship.model;
+        starships[i].manufacter = starship.manufacter;
+        starships[i].passengers = starship.passengers;
       }
       console.log(starships)
     })
@@ -76,6 +95,8 @@ function get_starships() {
       throw error;
     });
 }
+
+
 
 //module.exports = swapi;
 //module.exports = get_planets;
