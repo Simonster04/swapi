@@ -5,6 +5,7 @@ var people = [];
 var starships = [];
 
 /*
+//API que lee los nombres de las películas
 function swapi() {
   fetch('https://swapi.dev/api/films/', {
       method: 'GET',
@@ -23,6 +24,7 @@ function swapi() {
 }
 */
 /*
+//API que lee la info de los planetas
 function get_planets() {
   fetch('https://swapi.dev/api/planets/', {
       method: 'GET',
@@ -48,6 +50,7 @@ function get_planets() {
 */
 
 /*
+//API que lee la info de los actores
 function get_people() {
   fetch('https://swapi.dev/api/people/', {
       method: 'GET',
@@ -74,7 +77,7 @@ function get_people() {
 }
 */
 
-
+//API que lee la info de las naves
 function get_starships() {
   fetch('https://swapi.dev/api/starships/', {
       method: 'GET',
