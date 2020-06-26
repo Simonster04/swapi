@@ -1,3 +1,3 @@
-const swapi = require('./api/name');
+const swapi = require('./api');
 
 swapi();
