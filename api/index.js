@@ -12,19 +12,19 @@ async function setup() {
   const data = await response.json();
   const results = await data.results;
 
-  var films = [];
+  var films = {'results':[]};
   let i = 0;
 
   for(let film of results){
-    films.push({title: film.title});
+    films.results.push({title: film.title});
 
-    films[i].planets = await planets(film);
-    films[i].people = await people(film);
-    films[i].starships = await starships(film);
+    films.results[i].planets = await planets(film);
+    films.results[i].people = await people(film);
+    films.results[i].starships = await starships(film);
     i++;
   }
-
-  return(JSON.stringify(films));
+  films.count = i + 1;
+  return(JSON.stringify(films, null, 5));
 }
 
 //Envia la url de cada planeta a la función con la API
