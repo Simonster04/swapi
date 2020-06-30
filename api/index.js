@@ -22,6 +22,7 @@ async function setup() {
     films[i].starships = await starships(film);
     i++;
   }
+
   return(JSON.stringify(films));
 }
 
@@ -29,28 +30,33 @@ async function setup() {
 async function planets(film) {
   var planetsList = [];
   for(let planetApi of film.planets){
-    const planetInfo = await get_planets(planetApi)
+    const planetInfo = get_planets(planetApi)
     planetsList.push(planetInfo);
   }
-  return planetsList;
+
+  let responses = await Promise.all(planetsList);
+  return responses;
 }
 
 async function people(film) {
   var peopleList = [];
   for(let actorApi of film.characters){
-    const actorInfo = await get_people(actorApi)
+    const actorInfo = get_people(actorApi)
     peopleList.push(actorInfo);
   }
-  return peopleList;
+
+  let responses = await Promise.all(peopleList);
+  return responses;
 }
 
 async function starships(film) {
   var starshipsList = [];
   for(let starshipApi of film.starships){
-    const starshipInfo = await get_starships(starshipApi)
+    const starshipInfo = get_starships(starshipApi)
     starshipsList.push(starshipInfo);
   }
-  return starshipsList;
+  let responses = await Promise.all(starshipsList);
+  return responses;
 }
 
 //API que lee la info de los planetas
