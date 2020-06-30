@@ -1,10 +1,11 @@
 const fetch = require("node-fetch");
 
-//API que lee los nombres de las películas y llama a las demás APIs
+//Ejecuta y muestra en consola
 async function swapi() {
   setup().then(console.log);
 }
 
+//API que lee los nombres de las películas y llama a las demás APIs
 async function setup() {
   const baseUrl = 'https://swapi.dev/api/films/';
   const response = await fetch(baseUrl);
@@ -26,7 +27,7 @@ async function setup() {
   return(JSON.stringify(films));
 }
 
-
+//Envia la url de cada planeta a la función con la API
 async function planets(film) {
   var planetsList = [];
   for(let planetApi of film.planets){
@@ -38,6 +39,7 @@ async function planets(film) {
   return responses;
 }
 
+//Envia la url de cada personaje a la función con la API
 async function people(film) {
   var peopleList = [];
   for(let actorApi of film.characters){
@@ -49,6 +51,7 @@ async function people(film) {
   return responses;
 }
 
+//Envia la url de cada nave a la función con la API
 async function starships(film) {
   var starshipsList = [];
   for(let starshipApi of film.starships){
