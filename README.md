@@ -28,3 +28,7 @@ películas con la siguiente información:
 - Modelo (model)
 - Fabricante (manufacturer)
 - Número de pasajeros (passengers)
+
+
+## Ejecución
+En una terminal, en la ruta principal del usando ´node index.js´
