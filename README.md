@@ -31,4 +31,8 @@ películas con la siguiente información:
 
 
 ## Ejecución
-En una terminal, en la ruta principal del usando ´´´node index.js´´´
+En una terminal, en la ruta principal ejecuta el siguiente comando:
+
+```
+node index.js
+```
